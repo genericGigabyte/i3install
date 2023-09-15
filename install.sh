@@ -18,7 +18,7 @@ sudo apt install -y lxappearance
 #file manager
 sudo apt install -y thunar thunar-archive-plugin xfce4-settings xfce4-power-manager xfce4-terminal  policykit-1-gnome
 #the other terminal
-sudo apt install -y konsole
+sudo apt install -y kitty
 
 #network file tools/system events
 sudo apt install -y dialog mtools dosfstools avahi-daemon acpi acpid gvfs-backends
@@ -48,15 +48,15 @@ sudo apt install -y i3-wm
 
 #printing and bluetooth
 sudo apt install -y cups system-config-printer simple-scan
-sudo apt install -y bluez blueman
+#sudo apt install -y bluez blueman
 
 sudo systemctl enable cups
-sudo systemctl enable bluetooth
+#sudo systemctl enable bluetooth
 
 #intall extra packages I need
 #run timeshift by executing sudo timeshift-gtk
 #dunst config: ~/.Confing/dunst/dunstrc
-sudo apt install -y rofi drun dunst libnotify-bin unzip simple-scan libreoffice libreoffice-gtk-3 vcl shotwell flameshot timeshift
+sudo apt install -y rofi drun dunst libnotify-bin unzip simple-scan libreoffice libreoffice-gtk3 vcl shotwell flameshot timeshift zathura
 
 #install exa
 #.baschrc, change: alias ls='exa --grid --colour=always --icons'
