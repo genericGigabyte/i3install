@@ -1,0 +1,11 @@
+[Security]
+EAP-Method=PEAP
+EAP-Identity=anonymous@herts.ac.uk
+EAP-PEAP-CACert=/var/lib/iwd/ca.pem
+EAP-PEAP-ServerDomainMask=radius00.herts.ac.uk
+EAP-PEAP-Phase2-Method=MSCHAPV2
+EAP-PEAP-Phase2-Identity=zp21aah@herts.ac.uk
+EAP-PEAP-Phase2_Password=!7HX$6$2#m3G
+
+[Settings]
+AutoConnect=true
