@@ -56,7 +56,7 @@ sudo systemctl enable cups
 #intall extra packages I need
 #run timeshift by executing sudo timeshift-gtk
 #dunst config: ~/.Confing/dunst/dunstrc
-sudo apt install -y rofi drun dunst libnotify-bin unzip simple-scan libreoffice libreoffice-gtk3 vcl shotwell flameshot timeshift zathura
+sudo apt install -y rofi drun dunst libnotify-bin unzip simple-scan libreoffice libreoffice-gtk3 vcl shotwell flameshot timeshift zathura picom
 
 #install exa
 #.baschrc, change: alias ls='exa --grid --colour=always --icons'
@@ -69,7 +69,6 @@ sudo apt-get update && sudo apt-get install -y spotify-client
 
 #install fonts
 sudo apt install -y fonts-recommended fonts-ubuntu fonts-font-awesome fonts-terminus
-#install Londrina Solid (regular 400) from google fonts for spongebob car like font for the clock
 #don't forget nerd fonts jetbrains mono
 
 #lightdm
