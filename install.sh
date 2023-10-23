@@ -12,7 +12,7 @@ sudo apt install -y intel-microcode
 #network manager
 #change managed to true in /etc/NetworkManager/NetworkManager.conf
 #after desktop install follow the switching to IWD guide on debian.org
-sudo apt install -y network-manager network-manager-gnome
+sudo apt install -y network-manager network-manager-gnome gnome-control-center
 
 #appearance management
 sudo apt install -y lxappearance
