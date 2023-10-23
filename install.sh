@@ -2,10 +2,12 @@
 sudo apt install -y xorg xbacklight xbindkeys xvkbd xinput
 
 #basic essentials
-sudo apt install -y basic-essentials
+sudo apt install -y build-essential
 
 #intel microcode
 sudo apt install -y intel-microcode
+#AMD microcode
+#sudo apt install -y amd64-microcode
 
 #network manager
 #change managed to true in /etc/NetworkManager/NetworkManager.conf
@@ -48,10 +50,10 @@ sudo apt install -y i3-wm
 
 #printing and bluetooth
 sudo apt install -y cups system-config-printer simple-scan
-#sudo apt install -y bluez blueman
+sudo apt install -y bluez blueman
 
 sudo systemctl enable cups
-#sudo systemctl enable bluetooth
+sudo systemctl enable bluetooth
 
 #intall extra packages I need
 #run timeshift by executing sudo timeshift-gtk
@@ -76,5 +78,44 @@ sudo apt install -y lightdm lightdm-gtk-greeter-settings
 sudo systemctl enable lightdm
 
 sudo apt autoremove
+
+#apply dot files
+
+#dunst
+cd /home/zach/.config/dunst
+sudo rm -r dunstrc
+cd /home/zach/i3install/dunst
+sudo mv dunstrc /home/zach/.config/dunst
+
+#i3
+cd /home/zach/.config/i3
+sudo rm -r config
+cd /home/zach/i3install/i3
+sudo mv config /home/zach/.config/i3
+
+#i3blocks
+cd
+git clone https://github.com/Airblader/i3blocks-gaps.git
+make clean all
+sudo make install
+cd /home/zach/.config/
+sudo mkdir i3blocks
+cd i3blocks
+git clone https://github.com/vivien/i3blocks-contrib.git
+sudo mv i3blocks-contrib/ scripts
+cd /home/zach/i3install/
+sudo mv config /home/zach/.config/i3blocks
+
+#kitty
+cd /home/zach/.config/kitty
+sudo rm -r kitty.conf
+cd /home/zach/i3install/kitty
+sudo mv kitty.conf /home/zach/.config/kitty
+
+#rofi
+cd /home/zach/.config/rofi
+sudo rm -r config.rasi
+cd /home/zach/i3install/rofi
+sudo mv config.rasi /home/zach/.config/rofi
 
 printf "You can reboot now!"
