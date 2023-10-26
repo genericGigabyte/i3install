@@ -37,7 +37,7 @@ element {
 	padding: 10px;
 	border-radius: 5px;
 }
-element selected {
+element selected.normal {
 	background-color: #4C566A;
 	border-color: #5E81AC;
 }
