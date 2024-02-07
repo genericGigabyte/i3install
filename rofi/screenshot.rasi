@@ -1,0 +1,86 @@
+configuration {
+    show-icons:                 false;
+    hover-select:		true;
+}
+
+/* global properties */
+* {
+	font: "JetBrainsMono Nerd Font 28";
+}
+
+window {
+    transparency:                "real";
+    location:                    south;
+    anchor:                      south;
+    fullscreen:                  false;
+    width:			 340px;
+    x-offset:                    0px;
+    y-offset:                    -40px;
+    margin:                      0px;
+    padding:                     0px;
+    border:                      0px solid;
+    border-radius:               10px;
+    cursor:                      "default";
+    background-color:            #2E3440;
+    children:			 [ mainbox ];
+}
+
+/*****----- Main Box -----*****/
+mainbox {
+    enabled:                     true;
+    spacing:			 0px;
+    margin:                      0px;
+    padding:                     20px;
+    background-color:            transparent;
+    children:                    [ "listview" ];
+}
+
+/*****----- Listview -----*****/
+listview {
+    enabled:                     true;
+    expand:			 false;
+    layout:			 vertical;
+    cycle:                       true;
+    scrollbar:                   false;
+    flow:                        horizontal;
+    lines:			 1;
+    columns:		         3;
+    border:			 0px;
+    margin:			 0px;
+    spacing:                     15px;
+    background-color:            transparent;
+    cursor:                      "default";
+}
+
+/*****----- Elements -----*****/
+element {
+    orientation:		 vertical;
+    enabled:                     true;
+    padding:                     20px 0px;
+    border:                      0px solid;
+    border-radius:               5px;
+    background-color:            #434C5E;
+    text-color:                  #ECEFF4;
+    cursor:                      pointer;
+    children:			 [ "element-text" ];
+}
+element-text {
+	horizontal-align: 0.45;
+	vertical-align: 0.45;
+}
+
+element normal.normal,
+element alternate.normal {
+    background-color:            #434C5E;
+    text-color:                  #ECEFF4;
+}
+element normal.urgent,
+element alternate.urgent,
+element selected.active {
+    background-color:            #88C0D0;
+    text-color:                  #2E3440;
+}
+element selected.normal {
+    background-color:            #88C0D0;
+    text-color:                  #2E3440;
+}

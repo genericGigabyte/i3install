@@ -1,0 +1,72 @@
+configuration {
+	show-icons: false;
+	hover-select: true;
+}
+
+/* global properties */
+* {
+	font: "JetBrainsMono Nerd Font 28"; 
+	background: #2E3440;
+	foreground: #ECEFF4;
+}
+
+mainbox {
+	vertical-align: 0.5;
+	horitzontal-align: 0.5;
+	children: [ "listview" ];
+	background-color: #2E3440;
+	padding: 10px;
+}
+listview {
+	enabled: true;
+	expand: false;
+	scrollbar: false;
+	dynamic: true;
+	fixed-height: true;
+	fixed-columnts: true;
+	layout: vertical;
+	columns: 2;
+	lines: 2;
+	reverse: false;
+	border: 0px;
+	spacing: 15px;
+}
+
+/* theme-ing for the list elements*/
+element {
+	orientation: vertical;
+	children: [ "element-text" ];
+	border: 0px solid;
+	padding: 30px 0px;
+	border-radius: 5px;
+}
+element selected.normal {
+	background-color: #88C0D0;
+	text-color: #2E3440;
+}
+element.normal.normal,
+element.alternate.normal {
+	background-color: #434C5E;
+}
+element-text {
+	horizontal-align: 0.5;
+	vertical-align: 0.5;
+}
+
+window {
+	tranparency: "real";
+	fullscreen: false;
+	location: center;
+	anchor: center;
+	border: 0px;
+	border-radius: 10px;
+
+	x-offset: 0px;
+	y-offset: 0px;
+
+	width: 400px;
+
+	background-color: #2E3440;
+
+	children: [ mainbox ];
+}
